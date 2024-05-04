@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuizAplicationRtk", "QuizAplicationRtk\QuizAplicationRtk.csproj", "{5911A847-5820-4278-8579-66E1434A78DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{243BD538-4BB9-499D-8014-C7910AE1AFE8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{68ABD973-0BC0-4990-A702-8438D39AE360}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presetention", "Presetention", "{73C1F63E-AB0A-406B-89ED-380A06450AF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizAplicationRtk.DAL", "QuizAplicationRtk.DAL\QuizAplicationRtk.DAL.csproj", "{E955D00F-3F33-457A-A7FC-25AE280ADBD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizAplicationRtk.Aplication", "QuizAplicationRtk.Aplication\QuizAplicationRtk.Aplication.csproj", "{58645FBB-7DFA-47A4-BB0B-421C94DDDB67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizAplicationRtk.Domain", "QuizAplicationRtk.Domain\QuizAplicationRtk.Domain.csproj", "{CAEF5000-D3E2-407D-995C-457CF6E8F1A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5911A847-5820-4278-8579-66E1434A78DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5911A847-5820-4278-8579-66E1434A78DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5911A847-5820-4278-8579-66E1434A78DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5911A847-5820-4278-8579-66E1434A78DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E955D00F-3F33-457A-A7FC-25AE280ADBD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E955D00F-3F33-457A-A7FC-25AE280ADBD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E955D00F-3F33-457A-A7FC-25AE280ADBD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E955D00F-3F33-457A-A7FC-25AE280ADBD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58645FBB-7DFA-47A4-BB0B-421C94DDDB67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58645FBB-7DFA-47A4-BB0B-421C94DDDB67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58645FBB-7DFA-47A4-BB0B-421C94DDDB67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58645FBB-7DFA-47A4-BB0B-421C94DDDB67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAEF5000-D3E2-407D-995C-457CF6E8F1A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAEF5000-D3E2-407D-995C-457CF6E8F1A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAEF5000-D3E2-407D-995C-457CF6E8F1A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAEF5000-D3E2-407D-995C-457CF6E8F1A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5911A847-5820-4278-8579-66E1434A78DF} = {73C1F63E-AB0A-406B-89ED-380A06450AF1}
+		{E955D00F-3F33-457A-A7FC-25AE280ADBD1} = {68ABD973-0BC0-4990-A702-8438D39AE360}
+		{58645FBB-7DFA-47A4-BB0B-421C94DDDB67} = {243BD538-4BB9-499D-8014-C7910AE1AFE8}
+		{CAEF5000-D3E2-407D-995C-457CF6E8F1A0} = {243BD538-4BB9-499D-8014-C7910AE1AFE8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3AB02928-C4BD-4859-8750-C44ED8085785}
+	EndGlobalSection
+EndGlobal
