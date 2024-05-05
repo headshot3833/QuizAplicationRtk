@@ -39,6 +39,11 @@ public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : 
 
     }
 
+    public async Task<int> SaveChangesAsync()
+    {
+       return await _context.SaveChangesAsync();
+    }
+
     public TEntity Update(TEntity entity)
     {
         if (entity == null)

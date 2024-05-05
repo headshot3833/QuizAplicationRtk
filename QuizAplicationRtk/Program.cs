@@ -1,4 +1,5 @@
 
+using QuizAplicationRtk.Aplication.DependencyInjection;
 using QuizAplicationRtk.DAL.DipendencyInjection;
 
 namespace QuizAplicationRtk;
@@ -10,7 +11,7 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         builder.Services.AddControllers();
-
+        builder.Services.AddApplication();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
         builder.Services.AddDataAccessLayer(builder.Configuration);

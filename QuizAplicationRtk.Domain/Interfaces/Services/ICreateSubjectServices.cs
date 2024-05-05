@@ -10,5 +10,7 @@ namespace QuizAplicationRtk.Domain.Interfaces.Services;
 
 public interface ICreateSubjectServices
 {
-    Task<Subjects> CreateSubject(CreateSubjectDto createSubjectDto);
+    Task<SubjectDto> CreateSubject(SubjectDto createSubjectDto);
+
+    Task<SubjectDto> GetSubjectAsync(long id);
 }

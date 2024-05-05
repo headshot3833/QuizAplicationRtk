@@ -20,10 +20,23 @@ public class CreateTestController : ControllerBase
     [HttpPost]
     [ProducesResponseType(statusCode: StatusCodes.Status200OK)]
     [ProducesResponseType(statusCode: StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<CreateSubjectDto>> CreateSubject([FromBody] CreateSubjectDto dto)
+    public async Task<ActionResult<SubjectDto>> CreateSubject([FromBody] SubjectDto dto)
     {
         var response = await _services.CreateSubject(dto);
         if(response != null)
+        {
+            return Ok(response);
+        }
+        return BadRequest(response);
+    }
+
+    [HttpGet(template:"subject/{Id}")]
+    [ProducesResponseType(statusCode: StatusCodes.Status200OK)]
+    [ProducesResponseType(statusCode: StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<SubjectDto>> GetSubject(long Id)
+    {
+        var response = await _services.GetSubjectAsync(Id);
+        if (response != null)
         {
             return Ok(response);
         }
