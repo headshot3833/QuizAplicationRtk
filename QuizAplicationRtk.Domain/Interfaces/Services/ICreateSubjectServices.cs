@@ -1,5 +1,6 @@
 ﻿using QuizAplicationRtk.Domain.DTO.Subject;
 using QuizAplicationRtk.Domain.Entity;
+using QuizAplicationRtk.Domain.Interfaces.Result;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace QuizAplicationRtk.Domain.Interfaces.Services;
 
 public interface ICreateSubjectServices
 {
-    Task<SubjectDto> CreateSubject(SubjectDto createSubjectDto);
+    Task<BaseResult<SubjectDto>> CreateSubject(SubjectDto createSubjectDto);
 
     Task<SubjectDto> GetSubjectAsync(long id);
 }

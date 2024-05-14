@@ -18,7 +18,8 @@ public static class DependencyInjection
     }
     private static void InitService(this IServiceCollection services)
     {
-       services.AddScoped<ICreateSubjectServices, CreateSubjectService>();
+       services.AddScoped<ICreateTestService, TestService>();
+       services.AddScoped<ICreateSubjectServices, SubjectService>();
     }
 
 }

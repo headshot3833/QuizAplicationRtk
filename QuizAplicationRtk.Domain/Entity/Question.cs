@@ -9,13 +9,12 @@ namespace QuizAplicationRtk.Domain.Entity;
 
 public class Question
 {
-    public int Id { get; set; }
+    public long Id { get; set; }
 
     public string QuestionText { get; set; }
 
-    public Test Test { get; set; }
-
+    public Test TestId { get; set; }
+    public Subjects SubjectsId { get; set; }
     List<Answers> Answers { get; set; }
-    public AnswerType AnswerType { get; set; }
 
 }

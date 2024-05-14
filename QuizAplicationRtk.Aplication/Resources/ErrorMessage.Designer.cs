@@ -59,5 +59,41 @@ namespace QuizAplicationRtk.Aplication.Resources {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на InternalServerError.
+        /// </summary>
+        internal static string InternalServerError {
+            get {
+                return ResourceManager.GetString("InternalServerError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на SubjectAlreadyExist.
+        /// </summary>
+        internal static string SubjectAlreadyExist {
+            get {
+                return ResourceManager.GetString("SubjectAlreadyExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на SubjectNotFound.
+        /// </summary>
+        internal static string SubjectNotFound {
+            get {
+                return ResourceManager.GetString("SubjectNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на TestAlreadyExist.
+        /// </summary>
+        internal static string TestAlreadyExist {
+            get {
+                return ResourceManager.GetString("TestAlreadyExist", resourceCulture);
+            }
+        }
     }
 }

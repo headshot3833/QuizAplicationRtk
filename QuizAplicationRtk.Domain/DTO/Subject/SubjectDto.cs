@@ -7,4 +7,4 @@ using System.Threading.Tasks;
 
 namespace QuizAplicationRtk.Domain.DTO.Subject;
 
-public record class SubjectDto(long id, string Name);
+public record class SubjectDto(long Id, string Name);

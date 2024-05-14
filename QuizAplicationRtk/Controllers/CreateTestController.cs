@@ -1,45 +1,34 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using QuizAplicationRtk.Domain.DTO.Subject;
-using QuizAplicationRtk.Domain.Entity;
+using QuizAplicationRtk.Domain.DTO.Test;
 using QuizAplicationRtk.Domain.Interfaces.Services;
 
-namespace QuizAplicationRtk.Controllers;
-
-[Route("api/[controller]")]
-[ApiController]
-public class CreateTestController : ControllerBase
+namespace QuizAplicationRtk.Controllers
 {
-    private readonly ICreateSubjectServices _services;
-
-    public CreateTestController(ICreateSubjectServices services)
+    [Route("api/[controller]")]
+    [ApiController]
+    public class CreateTestController : ControllerBase
     {
-        _services = services;
-    }
+        private readonly ICreateTestService _services;
 
-    [HttpPost]
-    [ProducesResponseType(statusCode: StatusCodes.Status200OK)]
-    [ProducesResponseType(statusCode: StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<SubjectDto>> CreateSubject([FromBody] SubjectDto dto)
-    {
-        var response = await _services.CreateSubject(dto);
-        if(response != null)
+        public CreateTestController(ICreateTestService services)
         {
-            return Ok(response);
+            _services = services;
         }
-        return BadRequest(response);
-    }
 
-    [HttpGet(template:"subject/{Id}")]
-    [ProducesResponseType(statusCode: StatusCodes.Status200OK)]
-    [ProducesResponseType(statusCode: StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<SubjectDto>> GetSubject(long Id)
-    {
-        var response = await _services.GetSubjectAsync(Id);
-        if (response != null)
+
+        [HttpPost]
+        [ProducesResponseType(statusCode: StatusCodes.Status200OK)]
+        [ProducesResponseType(statusCode: StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<CreateTestDto>> CreateTest([FromBody] CreateTestDto dto)
         {
-            return Ok(response);
+            var response = await _services.CreateTestAsync(dto);
+            if (response != null)
+            {
+                return Ok(response);
+            }
+            return BadRequest(response);
         }
-        return BadRequest(response);
     }
 }

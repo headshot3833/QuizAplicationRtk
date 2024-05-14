@@ -14,3 +14,20 @@ public class BaseResult
 
     public int? ErrorCode { get; set; }
 }
+
+public class BaseResult<T> : BaseResult
+{
+    public BaseResult()
+    {
+
+    }
+    public BaseResult(string errorMessage, int? errorCode, T data)
+    {
+        ErrorMessage = errorMessage;
+        ErrorCode = errorCode;
+        Data = data;
+    }
+    public T Result { get; set; }
+
+    public T Data { get; set; }
+}

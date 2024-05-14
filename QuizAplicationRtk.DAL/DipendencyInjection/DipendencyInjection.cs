@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using QuizAplicationRtk.DAL.Repositories;
 using QuizAplicationRtk.Domain.DTO.Subject;
+using QuizAplicationRtk.Domain.DTO.Test;
 using QuizAplicationRtk.Domain.Entity;
 using QuizAplicationRtk.Domain.Interfaces.Repositories;
 using QuizAplicationRtk.Domain.Interfaces.Services;
@@ -31,5 +32,7 @@ public static class DipendencyInjection
     private static void InitRepositories(this IServiceCollection services)
     {
         services.AddScoped<IBaseRepository<Subjects>, BaseRepository<Subjects>>();
+
+        services.AddScoped<IBaseRepository<Test>, BaseRepository<Test>>();
     }
 }
